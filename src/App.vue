@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <router-view/>
+    <v-header></v-header>
+    <div class="mt100">
+      <router-view/>
+    </div>
+    <v-footer></v-footer>
   </div>
 </template>
 
 <script>
+  import header from "@/components/header"
+  import footer from "@/components/footer"
+  // import header from "@/components/header"
+
   export default {
     data() {
       return {}
     },
-    omponents: {},
+    components: {
+      'v-header': header,
+      'v-footer': footer
+    },
     methods: {},
-    mounted: function () {}
+    mounted: function () {
+    }
   }
 </script>
 
