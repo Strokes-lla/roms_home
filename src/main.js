@@ -6,10 +6,12 @@ import router from './router'
 import axios from 'axios'
 import store from './store/index'
 import '../css/base.css'
-import {Icon,Button} from 'element-ui';
+import {Icon,Button,Pagination, Row, Col} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Icon);
 Vue.use(Button);
+Vue.use(Pagination);
+Vue.use(Row);
 Vue.config.productionTip = false;
 Vue.prototype.$http = axios;
 /* eslint-disable no-new */

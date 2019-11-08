@@ -50,6 +50,7 @@
           this.active.fatherActive = index;
           this.active.sonActive = '';
           this.active.grandsonActive = '';
+          this.$emit('getIndex', this.active)
         } else if (Judge === 2) {
           this.active.sonActive = index;
           this.active.grandsonActive = '';
@@ -58,7 +59,12 @@
         }
       },
       getData(data) {
-        this.data = data
+        this.data = data[0];
+        this.active.fatherActive = this.data.option.findIndex((item, iundex) => item.title === this.$route.query.str)
+        if (data[1] !== undefined) {
+          this.active.fatherActive = data[1]
+        }
+        this.$emit('getIndex', this.active)
       },
     },
     components: {},
@@ -71,6 +77,7 @@
   .box_warpper {
     .content {
       background: white;
+
       .option {
         border-bottom: solid 1px #eaeaea;
         width: 100%;

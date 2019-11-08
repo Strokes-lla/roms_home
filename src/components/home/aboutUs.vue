@@ -4,10 +4,9 @@
       <div class="cover tc">
         <h5 class="white mt40 mb10">关于我们</h5>
         <p class="font white mb10">让客户生意更容易 让员工人生更美好</p>
-        <p class="font white">万商云集(成都)科技股份有限公司源于2004年，是一家深耕营销领域和SAAS领域的互联网企业，2018年6月挂牌新三板，股票代码：872832。<br>
-          公司主要面向4000万中小企业，通过SAAS产品帮助其开展“互联网+营销”，目前已累计服务10万家中小企业。</p>
+        <p class="font white">聚焦公众关注的辐射安全等环境问题，提供智能高端的设备和解决方案以及全方位的专业技术服务，持续创新为客户创造更大价值</p>
         <div class="video-index-ft">
-          <a>查看详情<i class="el-icon-video-play __relative"></i></a>
+          <span>查看详情<i class="el-icon-video-play __relative"></i></span>
         </div>
       </div>
     </div>
@@ -33,7 +32,7 @@
       width: 100%;
       min-width: 1300px;
       height: 280px;
-      background: url('../../assets/img/shutter_1.jpg') center;
+      background: url('../../assets/img/环境检测.png') center;
     }
 
     .cover {
@@ -50,7 +49,7 @@
       text-align: center;
     }
 
-    .video-index-ft a {
+    .video-index-ft span {
       display: inline-block;
       color: #FFFFFF;
       padding: 5px 10px;

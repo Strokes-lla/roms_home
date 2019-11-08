@@ -439,19 +439,44 @@
     "title": "关于我们",
     "path": "/aboutUs",
     "menu": {
-      "show": true
+      "show": true,
+      "option": [
+        {
+          "title": "公司简介"
+        },
+        {
+          "title": "团队＆业务"
+        },
+        {
+          "title": "公司使命"
+        },
+        {
+          "title": "公司愿景"
+        },
+        {
+          "title": "公司价值观"
+        }
+      ]
     }
   },
   {
     "title": "新闻",
-    "path": "",
+    "path": "/journalism",
     "menu": {
-      "show": true
+      "show": true,
+      "option": [
+        {
+          "title": "公司新闻"
+        },
+        {
+          "title": "行业热点"
+        }
+      ]
     }
   },
   {
-    "title": "服务",
-    "path": "",
+    "title": "联系我们",
+    "path": "/contactUs",
     "menu": {
       "show": true
     }

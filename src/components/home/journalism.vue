@@ -104,7 +104,7 @@
     }
     .details{
       display: inline-block;
-      background:url('../../assets/img/journalism.jpg') no-repeat;
+      background:url('../../assets/img/111.jpg') no-repeat;
       background-size:100% 100%;
       width:630px;
       height: 355px;

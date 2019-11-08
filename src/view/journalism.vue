@@ -15,7 +15,7 @@
               @current-change="getTableData"/>
           </el-row>
         </div>
-        <v-productDetails @back="showDetails" v-else></v-productDetails>
+        <v-journalismDetails @back="showDetails" v-else></v-journalismDetails>
       </div>
     </div>
   </div>
@@ -24,43 +24,45 @@
 <script>
   import headerImg from "@/components/headerImg"
   import leftMenu from "@/components/leftMenu"
-  import header from '../../unit/header'
-  import productDetails from "@/components/productCatalog/productDetails"
   import information from "@/components/information"
+  import journalismDetails from "@/components/journalism/journalismDetails"
 
   export default {
     data() {
       return {
-        details:true,
+        details: true,
         nowpage: 1,
         pageSize: 10,
         pageCount: 1,
         data: {
-          title: "综合产品目录",
-          option: [],
+          title: "新闻",
+          option: [{
+            title: "公司新闻"
+          }, {
+            title: "行业热点"
+          }],
         }
       }
     },
     filters: {},
     methods: {
-      showDetails(){
-        this.details=!this.details
-      },
       getTableData() {
       },
+      showDetails() {
+        this.details = !this.details
+      },
       setData() {
-        this.data.option = header.find((item, index) => item.path === '/productCatalog').menu.option;
         this.$refs.leftMenu.getData([this.data])
       },
     },
     components: {
       'v-headerImg': headerImg,
       'v-leftMenu': leftMenu,
-      'v-productDetails': productDetails,
-      'v-information': information
+      'v-information': information,
+      'v-journalismDetails': journalismDetails
     },
     mounted() {
-      this.setData();
+      this.setData()
     }
   }
 </script>
@@ -78,11 +80,6 @@
       min-height: 1000px;
       padding: 0 20px;
       margin: 20px 0 0 300px;
-
-      .pagination {
-        margin: 0 auto;
-        bottom: 20px;
-      }
     }
   }
 </style>

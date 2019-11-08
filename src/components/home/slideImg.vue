@@ -22,7 +22,7 @@
           loop: true,
           autoplay: true,
         },
-        imgList: [require('../../assets/img/shutter_1.jpg'), require('../../assets/img/shutter_2.jpg'), require('../../assets/img/shutter_3.jpg'), require('../../assets/img/shutter_4.jpg')]
+        imgList: [require('../../assets/img/690.jpg'), require('../../assets/img/691.jpg')]
       }
     },
     filters: {},
