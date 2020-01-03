@@ -19,7 +19,7 @@
           </div>
           <div class="mb15">
             <span class="el-icon-phone f16"></span>
-            <span class="f16">400-123-123</span>
+            <span class="f16">186-6716-2280</span>
           </div>
           <div class="mb15">
             <span class="el-icon-message f16"></span>
@@ -62,6 +62,8 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../css/webless.less';
+
   .box_warpper {
     .box {
       width: 1100px;

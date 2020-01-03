@@ -2,7 +2,7 @@
   <div class="box_warpper">
     <div class="tc __relative">
       <h1 class="news_view_title">卡迪诺亮相中国辐射防护学会2019年学术年会</h1>
-      <span class="__absolute pointer" @click="back" style="right: 20px;top:10px;color: rgb(64, 158, 255);">返回</span>
+      <span class="__absolute pointer back" @click="back">返回</span>
     </div>
     <div class="n_content_right_m">
       <span>日期:</span>
@@ -54,12 +54,13 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../../css/webless.less';
+
   .box_warpper {
     padding: 30px 10px 10px 10px;
 
     .news_view_title {
       font-size: 24px;
-      color: rgb(64, 158, 255);
       width: 100%;
       text-align: center;
       height: 40px;
@@ -95,13 +96,17 @@
     }
 
     .switch {
-      color: rgb(64, 158, 255);
+      color: @colour;
       height: 30px;
       bottom: 20px;
     }
 
     .pointer:hover {
       text-decoration: underline;
+    }
+    .back{
+      right: 20px;top:9px;
+      color: @colour;
     }
   }
 </style>

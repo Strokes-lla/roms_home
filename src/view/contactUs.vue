@@ -17,7 +17,7 @@
           </div>
           <div class="mb15">
             <span class="el-icon-phone f18 white"></span>
-            <span class="f18 white">400-123-123</span>
+            <span class="f18 white">186-6716-2280</span>
           </div>
           <div class="mb15">
             <span class="el-icon-message f18 white"></span>
@@ -33,7 +33,7 @@
           <h4 class="mb10 white f30 bold tc">平台入驻</h4>
           <div class="mb15">
             <span class="el-icon-phone f18 white"></span>
-            <span class="f18 white">400-123-123</span>
+            <span class="f18 white">186-6716-2280</span>
           </div>
           <div class="mb15">
             <span class="el-icon-message f18 white"></span>
@@ -81,6 +81,8 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../css/webless.less';
+
   .box_warpper {
     .box {
       background: white;
@@ -90,7 +92,7 @@
       .topInformation {
         width: 100%;
         height: 300px;
-        background: rgb(64, 158, 255);
+        background: @colour;
       }
 
       .right {

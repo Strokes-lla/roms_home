@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import home from '@/view/home'
-import aboutUs from '@/view/aboutUs'
-import productCatalog from '@/view/productCatalog'
-import journalism from '@/view/journalism'
-import contactUs from '@/view/contactUs'
-
 Vue.use(Router);
 
 export default new Router({
@@ -15,27 +9,42 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: home,
+      component: () => import('@/view/home'),
     },
     {
       path: '/aboutUs',
       name: 'aboutUs',
-      component: aboutUs,
+      component: () => import('@/view/aboutUs'),
     },
     {
       path: '/productCatalog',
       name: 'productCatalog',
-      component: productCatalog,
+      component: () => import('@/view/productCatalog'),
     },
     {
       path: '/journalism',
       name: 'journalism',
-      component: journalism,
+      component: () => import('@/view/journalism'),
+    },
+    {
+      path: '/downloads',
+      name: 'downloads',
+      component: () => import('@/view/downloads'),
     },
     {
       path: '/contactUs',
       name: 'contactUs',
-      component: contactUs,
+      component: () => import('@/view/contactUs'),
+    },
+    {
+      path: '/afterSale',
+      name: 'afterSale',
+      component: () => import('@/view/afterSale'),
+    },
+    {
+      path: '/inputData',
+      name: 'inputData',
+      component: () => import('@/view/inputData'),
     },
   ]
 })

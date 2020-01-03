@@ -76,6 +76,8 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../css/webless.less';
+
   .box_warpper {
     .box {
       min-height: 1000px;
@@ -92,7 +94,7 @@
       .prod_comp_view_name {
         line-height: 34px;
         font-size: 18px;
-        color: rgb(64, 158, 255);
+        color: @colour;
         font-weight: normal;
       }
 

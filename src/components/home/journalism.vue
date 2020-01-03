@@ -49,6 +49,8 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../../css/webless.less';
+
   .box_warpper {
     .content {
       height: 355px;
@@ -94,11 +96,11 @@
 
       .pointer:hover {
         .color9 {
-          color: rgb(64, 158, 255) !important;
+          color: @colour !important;
         }
 
         .color71 {
-          color: rgb(64, 158, 255) !important;
+          color: @colour !important;
         }
       }
     }
@@ -112,7 +114,7 @@
         border-radius:10px 0 0 10px;
         width:120px;
         height:45px;
-        background:rgb(64, 158, 255);
+        background:@colour;
         span{
           line-height: 45px;
         }

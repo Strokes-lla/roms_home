@@ -1,32 +1,20 @@
 <template>
-  <div class="box_warpper">
-    <v-modularTitle :strText="strText"></v-modularTitle>
-    <div class="swiper-container mb50">
-      <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
-        <!-- slides -->
-        <swiper-slide v-for="(item,index) in imgList" :key="index">
-          <div class="full pointer ovhide" @mousemove="show(index)" @mouseout="hide()">
-            <div class="bgImg full transition" :class="index===showIndex ? 'enlarge':''"
-                 :style="{background:'url('+item.img+') center','background-size':'100% 100%'}"></div>
-            <div class="cover tc transition" :class="index===showIndex ? '':'bgZero'">
-              <div class="heightCenter left0 right0" style="margin-top: -47px;">
-                <p class="white bold mb5">{{item.title}}</p>
-                <div style="height:70px;width: 80%; margin: 0 auto;">
-                  <span class="white">{{item.content}}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-      </swiper>
-    </div>
-  </div>
+	<div class="box_warpper">
+		<v-modularTitle :strText="strText"></v-modularTitle>
+		<div class="w1300 box mb20">
+			<div class="__relative bgBox transition inlineBlock pointer"
+					 @click="Jump('/productCatalog',item)"
+					 :class="'img'+index%10"
+					 v-for="(item,index) in list">
+				<p class="heightCenter tc w100">{{item}}</p>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
   import modularTitle from "@/components/home/modularTitle"
-  import 'vue-awesome-swiper/node_modules/swiper/dist/css/swiper.css'
-  import {swiper, swiperSlide} from 'vue-awesome-swiper'
+  import header from '../../../unit/header'
 
   export default {
     data() {
@@ -36,32 +24,18 @@
           title: '综合产品目录',
           content: '强大的业务支撑体系，确保企业用好 "辐射监测"'
         },
-        swiperOption: {
-          slidesPerView: 4,
-        },
-        imgList: [{
-          title: '辐射安全',
-          content: '辐射安全，创新为您',
-          img: require('../../assets/img/shutter_4.jpg')
-        }, {
-          title: '辐射安全',
-          content: '辐射安全，创新为您',
-          img: require('../../assets/img/shutter_2.jpg')
-        }, {
-          title: '辐射安全',
-          content: '辐射安全，创新为您',
-          img: require('../../assets/img/shutter_3.jpg')
-        }, {
-          title: '辐射安全',
-          content: '辐射安全，创新为您',
-          img: require('../../assets/img/shutter_4.jpg')
-        }]
+        list: []
       }
     },
     filters: {},
     methods: {
-      callback() {
-
+      Jump(path, data) {
+        this.$router.push({
+          path: path,
+          query: {
+            str: data
+          }
+        });
       },
       show(index) {
         this.showIndex = index;
@@ -69,64 +43,104 @@
       hide() {
         this.showIndex = '';
       },
+      screen() {
+        this.list = header[1].menu.option.map((item, index) => item.title);
+      },
     },
     components: {
-      swiper,
-      swiperSlide,
       'v-modularTitle': modularTitle
     },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
-    },
+    computed: {},
     mounted() {
+      this.screen();
     }
   }
 </script>
 
 <style lang="less" scoped>
-  .box_warpper {
-    .swiper-container {
-      width: 1300px;
-      height: 200px;
-    }
+	@import '../../../css/webless.less';
 
-    .full {
-      width: 100%;
-      height: 100%;
-    }
+	.box_warpper {
+		.box {
+			background: white;
+			min-height: 500px;
 
-    .bgImg {
-    }
+			.transition {
+				transition: all 0.2s;
+				-moz-transition: all 0.2s; /* Firefox 4 */
+				-webkit-transition: all 0.2s; /* Safari 和 Chrome */
+				-o-transition: all 0.2s; /* Opera */
+			}
 
-    .cover {
-      background: rgba(64, 158, 255, 0.4);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-    }
+			.bgBox {
+				width: 324px;
+				height: 215px;
+				margin: 0 1px -3px 0;
 
-    .transition {
-      transition: all 0.5s;
-      -moz-transition: all 0.5s; /* Firefox 4 */
-      -webkit-transition: all 0.5s; /* Safari 和 Chrome */
-      -o-transition: all 0.5s; /* Opera */
-    }
+				p {
+					color: white;
+				}
+			}
 
-    .enlarge {
-      transform: scale(1.3, 1.3);
-      -ms-transform: scale(1.3, 1.3); /* IE 9 */
-      -moz-transform: scale(1.3, 1.3); /* Firefox */
-      -webkit-transform: scale(1.3, 1.3); /* Safari 和 Chrome */
-      -o-transform: scale(1.3, 1.3); /* Opera */
-    }
+			.bgBox:hover {
+				transform: scale(1.05, 1.05);
+			}
 
-    .bgZero {
-      opacity: 0;
-    }
-  }
+			.img0 {
+				background: url('../../assets/img/product_img1.png');
+				background-size: 100% 100%;
+			}
+
+			.img1 {
+				background: url('../../assets/img/product_img2.png');
+				background-size: 100% 100%;
+			}
+
+			.img2 {
+				background: url('../../assets/img/product_img3.png');
+				background-size: 100% 100%;
+			}
+
+			.img3 {
+				background: url('../../assets/img/product_img4.png');
+				background-size: 100% 100%;
+			}
+
+			.img4 {
+				background: url('../../assets/img/product_img5.png');
+				background-size: 100% 100%;
+			}
+
+			.img5 {
+				background: url('../../assets/img/product_img6.png');
+				background-size: 100% 100%;
+			}
+
+			.img6 {
+				background: url('../../assets/img/product_img7.png');
+				background-size: 100% 100%;
+			}
+
+			.img7 {
+				background: url('../../assets/img/product_img8.png');
+				background-size: 100% 100%;
+			}
+
+			.img8 {
+				background: url('../../assets/img/product_img9.png');
+				background-size: 100% 100%;
+			}
+
+			.img9 {
+				background: url('../../assets/img/product_img10.png');
+				background-size: 100% 100%;
+			}
+
+			.img10 {
+				background: url('../../assets/img/product_img11.png');
+				background-size: 100% 100%;
+			}
+		}
+
+	}
 </style>

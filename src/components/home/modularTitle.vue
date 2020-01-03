@@ -22,6 +22,7 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../../css/webless.less';
   .box_warpper {
 
   }

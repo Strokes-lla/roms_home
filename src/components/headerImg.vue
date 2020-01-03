@@ -20,7 +20,9 @@
 </script>
 
 <style lang="less" scoped>
-    .box_warpper {
+  @import '../../css/webless.less';
+
+  .box_warpper {
       .box{
         width:100%;
         min-width:1300px;

@@ -21,6 +21,10 @@
         swiperOption: {
           loop: true,
           autoplay: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
         },
         imgList: [require('../../assets/img/690.jpg'), require('../../assets/img/691.jpg')]
       }
@@ -47,6 +51,8 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../../css/webless.less';
+
   .box_warpper {
     .swiper-container {
       width: 100%;

@@ -5,7 +5,7 @@
       <v-leftMenu :data="data" ref="leftMenu"></v-leftMenu>
       <div class="content __relative">
         <div v-if="details">
-          <v-information @showDetails="showDetails" :index="index" :key="index" v-for="(item,index) in 4"></v-information>
+          <v-journalismList @showDetails="showDetails" :index="index" :key="index" v-for="(item,index) in 4"></v-journalismList>
           <el-row type="flex" justify="center" class="page-divide mt20">
             <el-pagination
               :current-page="nowpage"
@@ -24,7 +24,7 @@
 <script>
   import headerImg from "@/components/headerImg"
   import leftMenu from "@/components/leftMenu"
-  import information from "@/components/information"
+  import journalismList from "@/components/journalism/journalismList"
   import journalismDetails from "@/components/journalism/journalismDetails"
 
   export default {
@@ -58,7 +58,7 @@
     components: {
       'v-headerImg': headerImg,
       'v-leftMenu': leftMenu,
-      'v-information': information,
+      'v-journalismList': journalismList,
       'v-journalismDetails': journalismDetails
     },
     mounted() {
@@ -68,6 +68,8 @@
 </script>
 
 <style lang="less" scoped>
+  @import '../../css/webless.less';
+
   .box_warpper {
     .box {
       min-height: 1000px;
