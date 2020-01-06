@@ -58,7 +58,7 @@
       padding: 10px;
 
       .news-box > div {
-        display: block;
+        display: block ;
         overflow: hidden;
 
         h5 {
