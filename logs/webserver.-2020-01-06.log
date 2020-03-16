@@ -1,0 +1,15 @@
+[2020-01-06T09:12:38.012] [INFO] default - http服务端口号 : 8008
+[2020-01-06T09:13:11.478] [INFO] default - 访问 /apidoc 接口
+[2020-01-06T09:13:11.485] [INFO] default - http://localhost:8008/dist/apidoc/index.html
+[2020-01-06T09:13:24.221] [INFO] default - 访问 /category/list 接口
+[2020-01-06T09:13:24.283] [INFO] default - queryList select * from category where type=1 order by sort; []
+[2020-01-06T09:13:24.327] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ 'cd11d7f4-22a8-418a-bc80-764123010a52' ]
+[2020-01-06T09:13:24.378] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ '52fd54ba-bffa-4a7d-a763-89e61b611bc9' ]
+[2020-01-06T09:13:24.402] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ '4d6bdd28-9e3d-4465-97d6-1a09e08593d3' ]
+[2020-01-06T09:13:24.457] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ 'ae832d9c-77ec-4b43-8ff8-eca5b99e4f1a' ]
+[2020-01-06T09:13:24.489] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ '5ad4cfa9-2c0c-4662-a738-0bdf3019303d' ]
+[2020-01-06T09:13:24.512] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ '3f694c02-a05d-49d3-8e9e-be0631aa4b08' ]
+[2020-01-06T09:13:24.531] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ '7516ea72-4f7c-46bd-9087-e2f60bbc0783' ]
+[2020-01-06T09:13:24.569] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ 'db3a8732-1605-4785-8295-5b863f035bf8' ]
+[2020-01-06T09:13:24.590] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ 'df0dd85e-b45a-4775-9d4d-11decbbc9980' ]
+[2020-01-06T09:13:24.627] [INFO] default - queryList select id,title as sonTitle,sort,type,supId from category where type=2 and supId=? order by sort; [ 'd522afb2-19a0-4641-b463-60c1f44926c2' ]

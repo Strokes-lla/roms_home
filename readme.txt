@@ -1,0 +1,1 @@
+GRANT ALL PRIVILEGES ON hzxtcom.* TO 'hzxt'@'%' IDENTIFIED BY 'hzxtcom123'
